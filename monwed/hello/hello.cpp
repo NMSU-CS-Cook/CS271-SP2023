@@ -1,10 +1,13 @@
 #include <iostream>
 #include <string>
 
-void printArray(int array[])
+int x=42;
+
+void printArray(int array[], int size)
 {
     int i = 0;
-    while (i < 10)
+    x = 76;
+    while (i < size)
     {
         std::cout << "vals[" << i << "] = "
              << array[i] << "\n";
@@ -16,6 +19,7 @@ void printArray(int array[])
 int main(int argc, char *argv[])
 {
     std::cout << "Hello World!\n";
+    std::cout << "x is " << x << "\n";
     for (int i = 1; i < argc; i++)
     {
         std::string s = argv[i];
@@ -27,7 +31,8 @@ int main(int argc, char *argv[])
     {
         vals[i] = i + 20;
     }
-    printArray(vals);
+    printArray(vals,10);
     std::cout << "vals[3]=" << vals[3] << "\n";
+    std::cout << "x is " << x << "\n";
     return 0;
 }

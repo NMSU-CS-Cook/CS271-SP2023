@@ -5,6 +5,8 @@
 public class Hello
 {
 
+static int x;
+
 static void printArray(int array[])
 {
     for (int i=0; i < 10; i++) {
