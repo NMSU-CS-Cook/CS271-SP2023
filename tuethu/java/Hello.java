@@ -2,10 +2,13 @@
 public class Hello
 {
 
+static int x;
+
 static void printArray(int array[])
 {
     System.out.println("Array size is " + array.length);
     int i = 0;
+    x = 42;
     while (i < 10) {
         System.out.println("array["+i+"] = "+array[i]);
         i++;
@@ -26,6 +29,7 @@ public static void main(String args[])
     }
     printArray(vals);
     System.out.println("vals[3] = "+vals[3]);
+    System.out.println("x is " + x);
 }
 
 } // end class

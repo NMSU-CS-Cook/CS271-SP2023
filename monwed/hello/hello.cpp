@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-int x=42;
+int x=42;  // NEVER DO THIS!!!
 
 void printArray(int array[], int size)
 {

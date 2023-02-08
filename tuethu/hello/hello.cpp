@@ -1,21 +1,16 @@
 #include <iostream>
 
-void testOperator()
-{
-   int v = 4;
-   std::cout << "v is " << v << "\n";
-   v = v << 2;
-   std::cout << "v is " << v << "\n";
-}
+int x;  // Global Variables are BAD!!!!!
 
-void printArray(int array[])
+void printArray(int array[], int size)
 {
     int i = 0;
-    while (i < 10) {
+    x = 42;
+    while (i < size) {
         std::cout << "array[" << i << "] = " << array[i] << "\n";
         i++;
     }
-    array[3] = 1234;
+    //array[3] = 1234;
 }
 
 int main(int argc, char *argv[])
@@ -29,8 +24,8 @@ int main(int argc, char *argv[])
         vals[i] = i+20;
     }
     //std::cout << "array size is " << vals.length << "\n";
-    printArray(vals);
-    std::cout << "vals[3]=" << vals[3] << "\n";
-    testOperator();
+    printArray(vals,10);
+    //std::cout << "vals[3]=" << vals[3] << "\n";
+    std::cout << "x is " << x << "\n";
     return 0;
 }
