@@ -14,10 +14,17 @@ int main(int argc, char* argv[])
    int& r = x;  // DO NOT USE THESE!!!
    std::cout << "x=" << x << "\n";
    std::cout << "p=" << p << "\n";
-   p = new int;
-   *p = 37; 
+   //p = &x; // address of x
+   p = new int[100]; // creates 100-element array
+   for (int i =0; i<100; i++) {
+      // array-pointer duality
+      p[i] = 200+i;
+   }
+   //*p = 37; // we are dereferencing p here
    std::cout << "p=" << p << "\n";
    std::cout << "*p=" << *p << "\n";
+   std::cout << "p[3]=" << p[3] << "\n";
+   std::cout << "p=[77]" << p[77] << "\n";
    std::cout << "x=" << x << "\n";
    std::cout << "argc=" << argc << "\n";
    f(*p);
