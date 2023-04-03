@@ -1,30 +1,36 @@
 #include <iostream>
 #include "Dog.h"
 
-Dog::Dog(std::string name, int weight,
-    std::string breed)
+Dog::Dog(std::string name, std::string color,
+   int weight)
+   : Pet(name)
 {
-   this->name = name;
+   std::cout << "In Dog constructor for " << name << "\n";
+   this->color = color;
    this->weight = weight;
-   this->breed = breed;
+   isHungry = false;
+   isTired = false;
+}
+
+Dog::~Dog()
+{
+   std::cout << "In Dog destructor for " << name << "\n";
+}
+
+std::ostream& operator<<(std::ostream& os, const Dog& dog)
+{
+   os << "I'm " << dog.name << " and big ";
+   os << "and " << dog.color << " and ";
+   os << "not tired and not hungry" << "!";
+   return os;
+}
+
+void Dog::sleep()
+{
+   std::cout << name << " is sleeping\n";
 }
 
 void Dog::play()
 {
-   std::cout << name << " is playing!\n";
+   std::cout << name << " is playing\n";
 }
-
-void Dog::bark()
-{
-   if (weight > 100) {
-      std::cout << name << "WOOF!\n";
-   } else if (weight > 50) {
-      std::cout << name << "Woof!\n";
-   } else {
-      std::cout << name << "yap!\n";
-   }
-}
-
-
-
-

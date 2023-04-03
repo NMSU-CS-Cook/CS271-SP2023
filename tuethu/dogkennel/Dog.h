@@ -1,14 +1,19 @@
 #include <string>
+#include <iostream>
+#include "Pet.h"
 
-class Dog
+class Dog : public Pet
 {
 public:
-   Dog(std::string name, int weight, 
-      std::string breed); // constructor
+   Dog(std::string name, std::string color,
+      int weight);
+   ~Dog();
+   void sleep();
    void play();
-   void bark();
+   friend std::ostream& operator<<(std::ostream& os, const Dog& dog);
 private:
-   std::string name;
    int weight;
-   std::string breed;
+   std::string color;
+   bool isHungry;
+   bool isTired;
 };
