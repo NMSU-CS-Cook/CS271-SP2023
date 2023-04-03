@@ -1,17 +1,18 @@
 #include <string>
+#include <iostream>
+#include "Pet.h"
 
-class Dog
+class Dog : public Pet
 {
 public:
    Dog(std::string name, std::string color,
-       int weight);
-   void sleep();
+      int weight);
+   ~Dog();
    void play();
    void eat();
+   friend std::ostream& operator<<(std::ostream& os, const Dog& dog);
 private:
-   enum {SEX_MALE, SEX_FEMALE} sex;
    int weight;
-   std::string name;
    std::string color;
    bool isHungry;
    bool isTired;
