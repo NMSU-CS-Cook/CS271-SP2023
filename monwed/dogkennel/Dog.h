@@ -10,6 +10,7 @@ public:
    ~Dog();
    void play();
    void eat();
+   virtual void speak() override;
    friend std::ostream& operator<<(std::ostream& os, const Dog& dog);
 private:
    int weight;

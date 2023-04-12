@@ -17,3 +17,7 @@ void Pet::sleep()
    std::cout << name << " is sleeping\n";
 }
 
+void Pet::speak()
+{
+   std::cout << name << " says Hello World!\n";
+}
