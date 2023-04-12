@@ -34,3 +34,13 @@ void Dog::play()
 {
    std::cout << name << " is playing\n";
 }
+
+void Dog::eat()
+{
+   std::cout << "Dog " << name << " is eating\n";
+}
+
+void Dog::speak()
+{
+   std::cout << name << " barks loudly!\n";
+}

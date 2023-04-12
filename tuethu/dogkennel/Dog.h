@@ -6,11 +6,13 @@ class Dog : public Pet
 {
 public:
    Dog(std::string name, std::string color,
-      int weight);
+       int weight);
    ~Dog();
    void sleep();
    void play();
-   friend std::ostream& operator<<(std::ostream& os, const Dog& dog);
+   virtual void eat();
+   virtual void speak() override;
+   friend std::ostream &operator<<(std::ostream &os, const Dog &dog);
 private:
    int weight;
    std::string color;

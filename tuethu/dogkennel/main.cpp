@@ -1,21 +1,25 @@
 #include <iostream>
 #include <vector>
 #include "Dog.h"
+#include "Cat.h"
 
-void doEat(Pet& pet)
+void saySomething(Pet& pet)
 {
-   pet.eat();
-   //pet.play(); // not allowed!
+   pet.speak();
 }
 
 int main()
 {
-   //std::cout << "This is our Dog Kennel\n";
-   Dog rover("Rover","grey",30);
-   Dog* chito = new Dog("Cheeto","orange",10);
-   doEat(rover);
-   doEat(*chito);
-   chito = new Dog("SonOfCheeto","yellow",10);
+   std::vector<Pet*> pets;
+   pets.push_back(new Dog("Zoe", "grey", 90));
+   pets.push_back(new Dog("Nova", "brown", 40));
+   pets.push_back(new Cat("Brody"));
+   pets.push_back(new Cat("Skitz"));
+   pets.push_back(new Dog("Chewy", "brown", 12));
+   std::cout << "-----Print--------\n";
+   for (Pet* pet : pets) {
+      saySomething(*pet);
+   }
    return 0;
 }
 

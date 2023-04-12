@@ -1,11 +1,15 @@
 #include <string>
+#ifndef PET_H
+#define PET_H
 
 class Pet
 {
 public:
    Pet(std::string name);
    ~Pet(); // destructor
-   void eat();
+   virtual void eat(); 
+   virtual void speak();
 protected:
    std::string name;
 };
+#endif
