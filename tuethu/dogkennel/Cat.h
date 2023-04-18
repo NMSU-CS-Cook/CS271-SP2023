@@ -2,10 +2,10 @@
 #include <iostream>
 #include "Pet.h"
 
-class Cat : public Pet
+class Cat : public Pet, Mammal
 {
 public:
    Cat(std::string name);
-   //virtual void speak() override;
+   virtual void speak() override;
 private:
 };

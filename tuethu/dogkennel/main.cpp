@@ -3,23 +3,23 @@
 #include "Dog.h"
 #include "Cat.h"
 
-void saySomething(Pet& pet)
-{
-   pet.speak();
-}
-
 int main()
 {
    std::vector<Pet*> pets;
    pets.push_back(new Dog("Zoe", "grey", 90));
    pets.push_back(new Dog("Nova", "brown", 40));
    pets.push_back(new Cat("Brody"));
+   //pets.push_back(new Pet("Pet"));
    pets.push_back(new Cat("Skitz"));
    pets.push_back(new Dog("Chewy", "brown", 12));
    std::cout << "-----Print--------\n";
    for (Pet* pet : pets) {
-      saySomething(*pet);
+      pet->speak();
+      //pet->eat();
    }
+   Dog* zoe = dynamic_cast<Dog*>(pets[0]);
+   //Mammal* zoem = dynamic_cast<Mammal*>(zoe);
+   zoe->eat();
    return 0;
 }
 

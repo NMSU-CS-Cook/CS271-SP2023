@@ -12,12 +12,9 @@ Pet::~Pet()
    std::cout << "In Pet destructor for " << name << "\n";
 }
 
-void Pet::eat()
-{
-   std::cout << "Pet " << name << " is eating\n";
-}
-
+/**
 void Pet::speak()
 {
    std::cout << name << " says Hello World!\n";
 }
+**/

@@ -1,6 +1,6 @@
 
-kennel: main.cpp Dog.cpp Pet.cpp Cat.cpp
-	g++ -std=c++11 -o kennel main.cpp Cat.cpp Dog.cpp Pet.cpp
+kennel: main.cpp Mammal.cpp Pet.cpp Dog.cpp Cat.cpp
+	g++ -std=c++11 -o kennel main.cpp Mammal.cpp Pet.cpp Dog.cpp Cat.cpp
 
 test: kennel
 	./kennel

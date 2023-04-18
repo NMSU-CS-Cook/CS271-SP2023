@@ -6,9 +6,7 @@ Cat::Cat(std::string name)
 {
 }
 
-/**
 void Cat::speak()
 {
-   std::cout << name << " barks loudly!\n";
+   std::cout << name << " meows quietly!\n";
 }
-**/

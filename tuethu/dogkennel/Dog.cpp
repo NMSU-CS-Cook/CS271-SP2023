@@ -8,7 +8,7 @@ Dog::Dog(std::string name, std::string color,
    std::cout << "In Dog constructor for " << name << "\n";
    this->color = color;
    this->weight = weight;
-   isHungry = false;
+   isHungry = true;
    isTired = false;
 }
 
@@ -34,12 +34,12 @@ void Dog::play()
 {
    std::cout << name << " is playing\n";
 }
-
+/**
 void Dog::eat()
 {
    std::cout << "Dog " << name << " is eating\n";
 }
-
+**/
 void Dog::speak()
 {
    std::cout << name << " barks loudly!\n";
