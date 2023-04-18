@@ -6,3 +6,8 @@ Cat::Cat(std::string name)
 {
    std::cout << "In Cat constructor for " << name << "\n";
 }
+
+void Cat::speak()
+{
+   std::cout << name << " meows lightly!\n";
+}

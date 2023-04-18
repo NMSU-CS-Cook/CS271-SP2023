@@ -5,5 +5,7 @@ class Cat : public Pet
 {
 public:
    Cat(std::string name);
+   virtual void speak();
 private:
 };
+

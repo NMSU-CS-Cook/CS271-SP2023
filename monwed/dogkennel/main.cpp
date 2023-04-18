@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "Dog.h"
+#include "Cat.h"
 
 void saySomething(Pet& pet)
 {
@@ -9,17 +10,23 @@ void saySomething(Pet& pet)
 
 int main()
 {
-   std::vector<Dog *> dogs;
-   dogs.push_back(new Dog("Zoe", "grey", 90));
-   dogs.push_back(new Dog("Nova", "brown", 40));
-   dogs.push_back(new Dog("Brody", "brown", 15));
-   dogs.push_back(new Dog("Skitz", "blue", 120));
-   dogs.push_back(new Dog("Chewy", "brown", 12));
+   std::vector<Pet*> pets;
+   pets.push_back(new Dog("Zoe", "grey", 90));
+   pets.push_back(new Dog("Nova", "brown", 40));
+   pets.push_back(new Cat("Garfield"));
+   pets.push_back(new Dog("Brody", "brown", 15));
+   pets.push_back(new Dog("Skitz", "blue", 120));
+   pets.push_back(new Dog("Chewy", "brown", 12));
    std::cout << "-----Speak--------\n";
-   for (Dog *dog : dogs)
+   for (Pet* pet : pets)
    {
-      saySomething(*dog);
+      //saySomething(*pet);
+      pet->speak();
    }
+   Cat mcjagger("McJagger");
+   mcjagger.sleep();
+   saySomething(mcjagger);
+   mcjagger.speak();
    return 0;
 }
 

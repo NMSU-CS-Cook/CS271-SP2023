@@ -1,4 +1,7 @@
 
+#ifndef PET_H
+#define PET_H
+
 class Pet
 {
 public:
@@ -9,3 +12,5 @@ public:
 protected:
    std::string name;
 };
+
+#endif
