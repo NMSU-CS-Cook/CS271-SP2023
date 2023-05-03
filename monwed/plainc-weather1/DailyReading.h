@@ -7,6 +7,9 @@ struct DailyReading
    int minTemperature;
 };
 
-int maxGreaterThan(struct DailyReading reading, int refTemp);
+// instead of methods, we just write functions with the first parameter
+// as a pointer to the data record "object"
+int   maxGreaterThan(struct DailyReading* reading, int refTemp);
+char* maxOnDateString(struct DailyReading* reading);
 
 #endif // DAILYREADING_H
